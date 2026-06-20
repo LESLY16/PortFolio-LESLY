@@ -99,19 +99,6 @@ body{
   transform:translateY(-2px);
 }
 
-.pdf-wrapper{
-  margin-top:16px;
-  border-radius:8px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,0.03);
-}
-
-.pdf-wrapper iframe{
-  width:100%;
-  height:auto;
-  min-height:600px;
-}
-
 .footer{
   text-align:center;
   padding:18px;
@@ -129,10 +116,6 @@ body{
   
   .projects-grid{
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  }
-  
-  .pdf-wrapper iframe{
-    min-height:500px;
   }
 }
 
@@ -199,14 +182,6 @@ body{
     padding:14px;
   }
   
-  .pdf-wrapper{
-    margin-top:12px;
-  }
-  
-  .pdf-wrapper iframe{
-    min-height:400px;
-  }
-  
   .footer{
     padding:16px;
     font-size:0.85rem;
@@ -250,9 +225,5 @@ body{
   
   .project-card{
     padding:12px;
-  }
-  
-  .pdf-wrapper iframe{
-    min-height:350px;
   }
 }
