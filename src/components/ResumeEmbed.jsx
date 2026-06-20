@@ -19,6 +19,7 @@ export default function ResumeEmbed() {
           frameBorder="0"
           width="100%"
           height="600px"
+          style={{ width: '100%', minHeight: '600px', height: 'auto' }}
         >
           This browser does not support embedded PDFs. You can <a href={resumeUrl}>download the PDF</a>.
         </iframe>
