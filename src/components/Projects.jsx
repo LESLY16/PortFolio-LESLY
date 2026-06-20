@@ -19,8 +19,8 @@ export default function Projects() {
     <div className="container section projects">
       <h2>Projects</h2>
       <div className="projects-grid">
-        {projects.map((p, i) => (
-          <article key={i} className="project-card">
+        {projects.map((p) => (
+        <article key={p.title} className="project-card">
             <h3>{p.title}</h3>
             <p>{p.desc}</p>
             <a className="btn" href={p.link}>View</a>
