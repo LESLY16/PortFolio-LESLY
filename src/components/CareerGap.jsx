@@ -6,10 +6,7 @@ export default function CareerGap() {
     period: 'Jan 2023 — Dec 2023',
     reasonTitle: 'Family care & upskilling',
     reasonText:
-      `I took a planned career gap from Jan 2023 to Dec 2023 to care for a close family member and to focus on
-      upskilling in modern front-end technologies (React, accessibility, and testing). During this period I completed
-      several online courses and built practice projects to keep my skills current. I'm now fully available and eager to
-      contribute to new projects.`
+      ` Took a planned break to focus on personal commitments while continuing technical upskilling.`
   }
 
   return (
