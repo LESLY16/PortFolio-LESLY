@@ -43,25 +43,216 @@ body{
 .nav a:hover{color:var(--text)}
 
 .section{padding:40px 0}
-.about p,.career-gap p{max-width:70ch;color:var(--muted)}
+.section h2{
+  font-size:clamp(1.75rem, 5vw, 2.5rem);
+  margin-bottom:20px;
+}
+.section h3{
+  font-size:clamp(1.25rem, 4vw, 1.75rem);
+}
+
+.about p,.career-gap p{
+  max-width:70ch;
+  color:var(--muted);
+  font-size:clamp(0.95rem, 2vw, 1.1rem);
+  line-height:1.6;
+}
 
 .project-card{
   background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  padding:16px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);
-  margin:8px;
+  padding:16px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.03);
+  margin:8px 0;
+  transition:all 0.3s ease;
 }
 
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.project-card:hover{
+  border-color:rgba(110, 231, 183, 0.3);
+  background:linear-gradient(180deg, rgba(110, 231, 183, 0.05), rgba(110, 231, 183, 0.02));
+}
+
+.project-card h3{margin-top:0;}
+.project-card p{color:var(--muted);margin:12px 0;}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:16px;
+}
 
 .btn{
-  display:inline-block;margin-top:10px;padding:8px 12px;background:var(--accent);color:#012; text-decoration:none;border-radius:6px;font-weight:600;
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 16px;
+  background:var(--accent);
+  color:#012;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
+  font-size:0.95rem;
+  transition:all 0.3s ease;
 }
 
-.pdf-wrapper{margin-top:16px;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
-.footer{text-align:center;padding:18px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
+.btn:hover{
+  opacity:0.9;
+  transform:translateY(-2px);
+}
 
-/* Responsive */
+.pdf-wrapper{
+  margin-top:16px;
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+.pdf-wrapper iframe{
+  width:100%;
+  height:auto;
+  min-height:600px;
+}
+
+.footer{
+  text-align:center;
+  padding:18px;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,0.03);
+  margin-top:40px;
+  font-size:0.95rem;
+}
+
+/* Tablet Screens (720px - 1024px) */
+@media (max-width:1024px){
+  :root{
+    --pad:16px;
+  }
+  
+  .projects-grid{
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  }
+  
+  .pdf-wrapper iframe{
+    min-height:500px;
+  }
+}
+
+/* Mobile Screens (under 720px) */
 @media (max-width:720px){
-  .header-inner{flex-direction:column;align-items:flex-start}
-  .nav{display:flex;flex-wrap:wrap;gap:8px}
+  :root{
+    --pad:16px;
+    --container-max:100%;
+  }
+  
+  .header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+  }
+  
+  .site-title{
+    font-size:1.1rem;
+  }
+  
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    width:100%;
+  }
+  
+  .nav a{
+    margin-left:0;
+    padding:6px 12px;
+    font-size:0.9rem;
+    border:1px solid rgba(110, 231, 183, 0.3);
+    border-radius:4px;
+    transition:all 0.3s ease;
+  }
+  
+  .nav a:hover{
+    background:rgba(110, 231, 183, 0.1);
+  }
+  
+  .section{
+    padding:30px 0;
+  }
+  
+  .section h2{
+    font-size:1.5rem;
+  }
+  
+  .section h3{
+    font-size:1.1rem;
+  }
+  
+  .about p, .career-gap p{
+    font-size:0.95rem;
+  }
+  
+  .projects-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  
+  .project-card{
+    margin:0;
+    padding:14px;
+  }
+  
+  .pdf-wrapper{
+    margin-top:12px;
+  }
+  
+  .pdf-wrapper iframe{
+    min-height:400px;
+  }
+  
+  .footer{
+    padding:16px;
+    font-size:0.85rem;
+  }
+}
+
+/* Small Mobile Screens (under 480px) */
+@media (max-width:480px){
+  .container{
+    padding:12px;
+  }
+  
+  .section{
+    padding:20px 0;
+  }
+  
+  .section h2{
+    font-size:1.3rem;
+    margin-bottom:16px;
+  }
+  
+  .nav{
+    flex-direction:column;
+    width:100%;
+  }
+  
+  .nav a{
+    width:100%;
+    text-align:center;
+  }
+  
+  .site-title{
+    font-size:1rem;
+  }
+  
+  .btn{
+    width:100%;
+    text-align:center;
+    padding:12px;
+  }
+  
+  .project-card{
+    padding:12px;
+  }
+  
+  .pdf-wrapper iframe{
+    min-height:350px;
+  }
 }
