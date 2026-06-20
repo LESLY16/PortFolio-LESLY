@@ -8,7 +8,6 @@ export default function Header() {
         <nav className="nav">
           <a href="#about">About</a>
           <a href="#career-gap">Career Gap</a>
-          <a href="#resume">Resume</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
