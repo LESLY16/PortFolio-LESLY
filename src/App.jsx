@@ -17,7 +17,7 @@ export default function App() {
         <section id="projects"><Projects /></section>
         <section id="contact"><Contact /></section>
       </main>
-      <footer className="footer">© {new Date().getFullYear()} Lesly M. Dsouza</footer>
+      <footer className="footer">© {const currentYear = new Date().getFullYear(); © {currentYear} Lesly M. Dsouza</footer>
     </div>
   )
 }
