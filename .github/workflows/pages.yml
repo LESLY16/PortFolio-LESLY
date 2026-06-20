@@ -36,11 +36,11 @@ jobs:
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./build
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         id: deployment
