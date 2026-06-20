@@ -7,6 +7,8 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 
 export default function App() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <div className="app">
       <Header />
@@ -17,7 +19,7 @@ export default function App() {
         <section id="projects"><Projects /></section>
         <section id="contact"><Contact /></section>
       </main>
-      <footer className="footer">© {const currentYear = new Date().getFullYear(); © {currentYear} Lesly M. Dsouza</footer>
+      <footer className="footer">© {currentYear} Lesly M. Dsouza</footer>
     </div>
   )
 }
